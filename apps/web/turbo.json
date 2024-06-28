@@ -1,0 +1,17 @@
+{
+	"extends": ["//"],
+	"tasks": {
+		"start:dev": {
+			"dependsOn": []
+		},
+		"ci:build:production": {
+			"dependsOn": []
+		},
+		"ci:build:staging": {
+			"dependsOn": []
+		},
+		"lint": {
+			"dependsOn": []
+		}
+	}
+}

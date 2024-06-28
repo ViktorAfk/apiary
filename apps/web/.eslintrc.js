@@ -83,12 +83,6 @@ module.exports = {
         'react/jsx-key': 'error',
         '@typescript-eslint/no-unused-vars': 'error',
         indent: 'off',
-        // 'react/function-component-definition': [
-        //   2,
-        //   {
-        //     namedComponents: 'arrow-function',
-        //   },
-        // ],
         'react/jsx-filename-extension': 'off',
         '@typescript-eslint/ban-ts-comment': 'error',
         '@typescript-eslint/naming-convention': [
@@ -166,21 +160,6 @@ module.exports = {
         'import/no-default-export': 'off',
       },
     },
-    {
-      files: ['src/@generated/zod/**/*'],
-      rules: {
-        'import/no-cycle': 'off',
-        'padding-line-between-statements': 'off',
-        quotes: 'off',
-        '@typescript-eslint/quotes': 'off',
-        '@typescript-eslint/comma-dangle': 'off',
-      },
-    },
-    {
-      files: ['src/graphql/index.ts'],
-      rules: {
-        'padding-line-between-statements': 'off',
-      },
-    },
+   
   ],
 }

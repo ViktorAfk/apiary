@@ -1,0 +1,32 @@
+{
+	"extends": ["//"],
+	"tasks": {
+		"start:dev": {
+			"dependsOn": ["^build"]
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist"]
+		},
+		"lint": {
+			"dependsOn": ["build"],
+			"inputs": [
+				"src/**",
+				"bin/**",
+				"package.json",
+				"tsconfig.json",
+				".eslintrc.js"
+			]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"inputs": [
+				"src/**",
+				"bin/**",
+				"package.json",
+				"tsconfig.json",
+				".eslintrc.js"
+			]
+		}
+	}
+}
