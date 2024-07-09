@@ -73,11 +73,11 @@ module.exports = {
       },
     },
     {
+      files: ['**/*.ts', '**/*.tsx'],
       parserOptions: {
         project: 'tsconfig.json', // Если у вас есть tsconfig.bun.json
         sourceType: 'module',
       },
-      files: ['prisma/seed.ts'],
     },
   ],
 };

@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "linter": {
-    "ignore": ["**/@generated/*", "graphql-env.ts"],
+    "ignore": [],
     "rules": {
       "style": {
         "useImportType": "off"
@@ -30,7 +30,7 @@
     "formatter": {
       "enabled": true,
       "quoteStyle": "single",
-      "semicolons": "asNeeded",
+      "semicolons": "always",
       "indentStyle": "space",
       "indentWidth": 2,
       "lineWidth": 80,
