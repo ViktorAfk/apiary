@@ -47,8 +47,8 @@ module.exports = {
         'import/no-default-export': ['warn'],
         'import/no-cycle': ['warn'],
         'import/prefer-default-export': 'off',
-        semi: ['error', 'never'],
-        '@typescript-eslint/semi': ['error', 'never'],
+        semi: ['error', 'always'],
+        '@typescript-eslint/semi': ['error', 'always'],
         quotes: [
           'error',
           'single',

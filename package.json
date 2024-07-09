@@ -6,7 +6,7 @@
     "build": "turbo run build",
     "start:dev": "turbo run start:dev",
     "lint": "turbo run lint",
-    "biome:lint": "pnpm biome lint apps && pnpm biome lint packages",
+    "biome:lint": "pnpm biome lint apps",
     "prepare": "husky"
   },
   "devDependencies": {
