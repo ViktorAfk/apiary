@@ -118,7 +118,7 @@ module.exports = {
         'react/jsx-no-bind': [
           'error',
           {
-            allowArrowFunctions: false,
+            allowArrowFunctions: true,
           },
         ],
         '@typescript-eslint/no-explicit-any': 'error',

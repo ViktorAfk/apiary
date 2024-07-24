@@ -14,6 +14,7 @@ module.exports = {
     jest: true,
   },
   ignorePatterns: [
+    'db/migrations/**/*.js',
     '.eslintrc.js',
     'updateSkills.mjs',
     './serverless/**/*',
@@ -75,7 +76,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       parserOptions: {
-        project: 'tsconfig.json', // Если у вас есть tsconfig.bun.json
+        project: 'tsconfig.json',
         sourceType: 'module',
       },
     },
