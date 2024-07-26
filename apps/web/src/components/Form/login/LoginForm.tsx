@@ -17,11 +17,7 @@ const schema = z
 type FormData = z.infer<typeof schema>;
 
 export const LoginForm: React.FC = () => {
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>({
+  const { control, handleSubmit } = useForm<FormData>({
     defaultValues: {
       name: '',
       email: '',
@@ -29,9 +25,7 @@ export const LoginForm: React.FC = () => {
     },
     resolver: zodResolver(schema),
   });
-  const onHandleSubmit = handleSubmit((data) => {
-    console.log(data);
-  });
+  const onHandleSubmit = handleSubmit(() => {});
 
   return (
     <Box
