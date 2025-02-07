@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ['next.config.js', '.next', '.turbo'],
+  ignorePatterns: ['next.config.js', 'env.d.ts', '.next', '.turbo'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],

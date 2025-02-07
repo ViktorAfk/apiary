@@ -1,16 +1,12 @@
 {
   "name": "monorepo",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "build": "turbo run build",
     "start:dev": "turbo run start:dev",
     "lint": "turbo run lint",
-    "biome:lint": "pnpm biome lint apps",
-    "prepare": "husky"
+    "biome:lint": "pnpm biome lint apps"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
