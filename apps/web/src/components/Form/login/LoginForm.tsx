@@ -9,7 +9,6 @@ import { InputField } from '../InputField';
 const schema = z
   .object({
     email: z.string().email().min(5),
-    name: z.string().min(1),
     password: z.string().min(8),
   })
   .required();
@@ -19,7 +18,6 @@ type FormData = z.infer<typeof schema>;
 export const LoginForm: React.FC = () => {
   const { control, handleSubmit } = useForm<FormData>({
     defaultValues: {
-      name: '',
       email: '',
       password: '',
     },
@@ -33,10 +31,6 @@ export const LoginForm: React.FC = () => {
       component={'form'}
       onSubmit={onHandleSubmit}
     >
-      <InputField<FormData>
-        textFieldProps={{ variant: 'outlined', label: 'Name' }}
-        controller={{ control, name: 'name' }}
-      />
       <InputField<FormData>
         textFieldProps={{
           variant: 'outlined',
