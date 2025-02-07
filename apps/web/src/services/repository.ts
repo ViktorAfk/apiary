@@ -1,5 +1,5 @@
-export const Api = {
-  getAll: async <T>(url: string): Promise<T> => {
+export class Api {
+  async getAll<T>(url: string): Promise<T> {
     try {
       const response = await fetch(`${url}`);
 
@@ -20,9 +20,9 @@ export const Api = {
       console.error('Fetch', error);
       throw new Error();
     }
-  },
+  }
 
-  getOne: async <T>(url: string): Promise<T> => {
+  async getOne<T>(url: string): Promise<T> {
     try {
       const response = await fetch(`${url}`);
 
@@ -43,13 +43,13 @@ export const Api = {
       console.error('Fetch', error);
       throw new Error();
     }
-  },
+  }
 
-  post: async <T>(url: string, params: BodyInit): Promise<T> => {
+  async post<T, P>(url: string, params: P): Promise<T> {
     try {
       const response = await fetch(`${url}`, {
         method: 'POST',
-        body: params,
+        body: JSON.stringify(params),
       });
 
       if (response.status === 404) {
@@ -69,9 +69,9 @@ export const Api = {
       console.error('Fetch', error);
       throw new Error();
     }
-  },
+  }
 
-  update: async <T>(url: string, params: BodyInit): Promise<T> => {
+  async update<T>(url: string, params: BodyInit): Promise<T> {
     try {
       const response = await fetch(`${url}`, {
         method: 'PATCH',
@@ -95,9 +95,9 @@ export const Api = {
       console.error('Fetch', error);
       throw new Error();
     }
-  },
+  }
 
-  remove: async <T>(url: string): Promise<T> => {
+  async remove<T>(url: string): Promise<T> {
     try {
       const response = await fetch(`${url}`);
 
@@ -118,5 +118,7 @@ export const Api = {
       console.error('Fetch', error);
       throw new Error();
     }
-  },
-};
+  }
+}
+
+export const $api = new Api();
